@@ -5,7 +5,7 @@ import { Product as ProductType } from "@/db";
 const Product = ({ product }: { product: ProductType }) => {
   return (
     <div className="group relative">
-      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-auto group-hover:opacity-75 lg:h-80">
         <img
           src={product.imageId}
           alt="product image"
@@ -20,7 +20,7 @@ const Product = ({ product }: { product: ProductType }) => {
             Size {product.size.toUpperCase()}, {product.color}
           </p>
         </div>
-        <p className="text-sm font-medium text-gray-900"></p>
+        <p className="text-sm font-medium text-gray-900">{product.price}</p>
       </div>
     </div>
   );
